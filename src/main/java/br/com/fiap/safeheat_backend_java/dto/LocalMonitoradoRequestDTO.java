@@ -2,6 +2,8 @@ package br.com.fiap.safeheat_backend_java.dto;
 
 import jakarta.validation.constraints.*;
 
+import java.math.BigDecimal;
+
 public class LocalMonitoradoRequestDTO {
 
     @NotBlank(message = "Nome é obrigatório.")
@@ -28,10 +30,10 @@ public class LocalMonitoradoRequestDTO {
     private String cep;
 
     @NotNull(message = "Latitude é obrigatória.")
-    private Double latitude;
+    private BigDecimal latitude;
 
     @NotNull(message = "Longitude é obrigatória.")
-    private Double longitude;
+    private BigDecimal longitude;
 
     @NotNull(message = "ID do usuário é obrigatório.")
     private Long usuarioId;
@@ -40,8 +42,8 @@ public class LocalMonitoradoRequestDTO {
     }
 
     public LocalMonitoradoRequestDTO(String nome, String rua, String numero, String complemento, String bairro,
-                                     String cidade, String estado, String cep, Double latitude,
-                                     Double longitude, Long usuarioId) {
+                                     String cidade, String estado, String cep, BigDecimal latitude,
+                                     BigDecimal longitude, Long usuarioId) {
         this.nome = nome;
         this.rua = rua;
         this.numero = numero;
@@ -119,19 +121,19 @@ public class LocalMonitoradoRequestDTO {
         this.cep = cep;
     }
 
-    public Double getLatitude() {
+    public BigDecimal getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(Double latitude) {
+    public void setLatitude(BigDecimal latitude) {
         this.latitude = latitude;
     }
 
-    public Double getLongitude() {
+    public BigDecimal getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(Double longitude) {
+    public void setLongitude(BigDecimal longitude) {
         this.longitude = longitude;
     }
 

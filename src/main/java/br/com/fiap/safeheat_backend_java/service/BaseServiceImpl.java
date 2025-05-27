@@ -3,6 +3,7 @@ package br.com.fiap.safeheat_backend_java.service;
 import br.com.fiap.safeheat_backend_java.interfaces.IBaseService;
 import br.com.fiap.safeheat_backend_java.exception.ResourceNotFoundException;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 

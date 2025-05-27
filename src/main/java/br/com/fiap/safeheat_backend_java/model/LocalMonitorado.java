@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 
@@ -44,10 +45,10 @@ public class LocalMonitorado {
     private String cep;
 
     @Column(precision = 10, scale = 6)
-    private Double latitude;  // para mapa/localização
+    private BigDecimal latitude;  // para mapa/localização
 
     @Column(precision = 10, scale = 6)
-    private Double longitude; // para mapa/localização
+    private BigDecimal longitude; // para mapa/localização
 
     @ManyToOne
     @JoinColumn(name = "usuario_id")
@@ -60,7 +61,7 @@ public class LocalMonitorado {
     }
 
     public LocalMonitorado(Long id, String nome, String rua, String numero, String complemento, String bairro,
-                           String cidade, String estado, String cep, Double latitude, Double longitude, Usuario usuario,
+                           String cidade, String estado, String cep, BigDecimal latitude, BigDecimal longitude, Usuario usuario,
                            List<AlertaCalor> alertas) {
         this.id = id;
         this.nome = nome;
@@ -149,19 +150,19 @@ public class LocalMonitorado {
         this.cep = cep;
     }
 
-    public Double getLatitude() {
+    public BigDecimal getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(Double latitude) {
+    public void setLatitude(BigDecimal latitude) {
         this.latitude = latitude;
     }
 
-    public Double getLongitude() {
+    public BigDecimal getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(Double longitude) {
+    public void setLongitude(BigDecimal longitude) {
         this.longitude = longitude;
     }
 

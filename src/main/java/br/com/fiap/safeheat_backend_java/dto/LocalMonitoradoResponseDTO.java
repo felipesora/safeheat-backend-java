@@ -1,5 +1,6 @@
 package br.com.fiap.safeheat_backend_java.dto;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public class LocalMonitoradoResponseDTO {
@@ -12,8 +13,8 @@ public class LocalMonitoradoResponseDTO {
     private String cidade;
     private String estado;
     private String cep;
-    private Double latitude;
-    private Double longitude;
+    private BigDecimal latitude;
+    private BigDecimal longitude;
     private Long usuarioId;
     private List<AlertaCalorResponseDTO> alertas;
 
@@ -21,8 +22,8 @@ public class LocalMonitoradoResponseDTO {
     }
 
     public LocalMonitoradoResponseDTO(Long id, String nome, String rua, String numero, String complemento,
-                                      String bairro, String cidade, String estado, String cep, Double latitude,
-                                      Double longitude, Long usuarioId, List<AlertaCalorResponseDTO> alertas) {
+                                      String bairro, String cidade, String estado, String cep, BigDecimal latitude,
+                                      BigDecimal longitude, Long usuarioId, List<AlertaCalorResponseDTO> alertas) {
         this.id = id;
         this.nome = nome;
         this.rua = rua;
@@ -110,19 +111,19 @@ public class LocalMonitoradoResponseDTO {
         this.cep = cep;
     }
 
-    public Double getLatitude() {
+    public BigDecimal getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(Double latitude) {
+    public void setLatitude(BigDecimal latitude) {
         this.latitude = latitude;
     }
 
-    public Double getLongitude() {
+    public BigDecimal getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(Double longitude) {
+    public void setLongitude(BigDecimal longitude) {
         this.longitude = longitude;
     }
 
