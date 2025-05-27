@@ -1,6 +1,7 @@
 package br.com.fiap.safeheat_backend_java.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -10,6 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@JsonPropertyOrder({ "id_usuario", "nome", "email", "senha", "locais" })
 @Entity
 @Table(name = "sh_usuarios")
 public class Usuario {

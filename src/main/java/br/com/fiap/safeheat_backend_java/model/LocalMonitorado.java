@@ -1,6 +1,7 @@
 package br.com.fiap.safeheat_backend_java.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,6 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@JsonPropertyOrder({ "id_local", "nome", "rua", "numero", "complemento", "bairro", "cidade", "estado", "cep", "latitude", "longitude", "usuario_id" })
 @Entity
 @Table(name = "sh_local_monitorado")
 public class LocalMonitorado {

@@ -1,6 +1,7 @@
 package br.com.fiap.safeheat_backend_java.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,6 +14,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@JsonPropertyOrder({ "id_alerta", "grau", "nivel_risco", "data_alerta", "id_local" })
 @Entity
 @Table(name = "sh_alertas_calor")
 public class AlertaCalor {
@@ -33,7 +35,7 @@ public class AlertaCalor {
     @Column(name = "data_alerta", updatable = false)
     private LocalDateTime dataAlerta;
 
-    @Column(nullable = false, length = 100)
+    @Column(name = "nivel_risco",nullable = false, length = 100)
     private String nivelRisco;
 
     @ManyToOne
