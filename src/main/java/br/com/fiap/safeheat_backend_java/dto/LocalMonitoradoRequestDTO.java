@@ -1,5 +1,6 @@
 package br.com.fiap.safeheat_backend_java.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.*;
 
 import java.math.BigDecimal;
@@ -36,6 +37,7 @@ public class LocalMonitoradoRequestDTO {
     private BigDecimal longitude;
 
     @NotNull(message = "ID do usuário é obrigatório.")
+    @JsonProperty("id_usuario")
     private Long usuarioId;
 
     public LocalMonitoradoRequestDTO() {

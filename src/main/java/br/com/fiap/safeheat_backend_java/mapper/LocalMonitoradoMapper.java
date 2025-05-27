@@ -6,15 +6,23 @@ import br.com.fiap.safeheat_backend_java.dto.LocalMonitoradoResponseDTO;
 import br.com.fiap.safeheat_backend_java.model.LocalMonitorado;
 import br.com.fiap.safeheat_backend_java.model.Usuario;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class LocalMonitoradoMapper {
     public static LocalMonitoradoResponseDTO toDTO(LocalMonitorado local){
-        List<AlertaCalorResponseDTO> alertas = local.getAlertas()
-                .stream()
-                .map(AlertaCalorMapper::toDTO)
-                .collect(Collectors.toList());
+        List<AlertaCalorResponseDTO> alertas;
+
+        if (local.getAlertas() != null){
+            alertas = local.getAlertas()
+                    .stream()
+                    .map(AlertaCalorMapper::toDTO)
+                    .collect(Collectors.toList());
+        } else {
+            alertas = new ArrayList<>();
+        }
+
 
         return new LocalMonitoradoResponseDTO(
             local.getId(),

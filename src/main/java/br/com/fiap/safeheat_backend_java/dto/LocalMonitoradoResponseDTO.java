@@ -1,9 +1,14 @@
 package br.com.fiap.safeheat_backend_java.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import java.math.BigDecimal;
 import java.util.List;
 
+@JsonPropertyOrder({ "id_local", "nome", "rua", "numero", "complemento", "bairro", "cidade", "estado", "cep", "latitude", "longitude", "id_usuario", "alertas" })
 public class LocalMonitoradoResponseDTO {
+    @JsonProperty("id_local")
     private Long id;
     private String nome;
     private String rua;
@@ -15,6 +20,7 @@ public class LocalMonitoradoResponseDTO {
     private String cep;
     private BigDecimal latitude;
     private BigDecimal longitude;
+    @JsonProperty("id_usuario")
     private Long usuarioId;
     private List<AlertaCalorResponseDTO> alertas;
 
