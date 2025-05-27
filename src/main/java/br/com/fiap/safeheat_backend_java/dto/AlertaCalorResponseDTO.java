@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class AlertaCalorResponseDTO {
 
     private Long id;
-    private Double grau;
+    private String grau;
     private String mensagem;
     private LocalDateTime dataAlerta;
     private String nivelRisco;
@@ -14,7 +14,7 @@ public class AlertaCalorResponseDTO {
     public AlertaCalorResponseDTO() {
     }
 
-    public AlertaCalorResponseDTO(Long id, Double grau, String mensagem, LocalDateTime dataAlerta, String nivelRisco, Long localId) {
+    public AlertaCalorResponseDTO(Long id, String grau, String mensagem, LocalDateTime dataAlerta, String nivelRisco, Long localId) {
         this.id = id;
         this.grau = grau;
         this.mensagem = mensagem;
@@ -31,11 +31,11 @@ public class AlertaCalorResponseDTO {
         this.id = id;
     }
 
-    public Double getGrau() {
+    public String getGrau() {
         return grau;
     }
 
-    public void setGrau(Double grau) {
+    public void setGrau(String grau) {
         this.grau = grau;
     }
 
