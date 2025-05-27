@@ -1,5 +1,7 @@
 package br.com.fiap.safeheat_backend_java.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.List;
 
 public class UsuarioResponseDTO {
@@ -8,17 +10,18 @@ public class UsuarioResponseDTO {
     private String nome;
     private String email;
     private String senha;
-    private List<LocalMonitoradoResponseDTO> locaisFavoritos;
+    @JsonProperty("locais")
+    private List<LocalMonitoradoResponseDTO> locais;
 
     public UsuarioResponseDTO() {
     }
 
-    public UsuarioResponseDTO(Long id, String nome, String email, String senha, List<LocalMonitoradoResponseDTO> locaisFavoritos) {
+    public UsuarioResponseDTO(Long id, String nome, String email, String senha, List<LocalMonitoradoResponseDTO> locais) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.senha = senha;
-        this.locaisFavoritos = locaisFavoritos;
+        this.locais = locais;
     }
 
     public Long getId() {
@@ -53,11 +56,11 @@ public class UsuarioResponseDTO {
         this.senha = senha;
     }
 
-    public List<LocalMonitoradoResponseDTO> getLocaisFavoritos() {
-        return locaisFavoritos;
+    public List<LocalMonitoradoResponseDTO> getLocais() {
+        return locais;
     }
 
-    public void setLocaisFavoritos(List<LocalMonitoradoResponseDTO> locaisFavoritos) {
-        this.locaisFavoritos = locaisFavoritos;
+    public void setLocais(List<LocalMonitoradoResponseDTO> locais) {
+        this.locais = locais;
     }
 }
