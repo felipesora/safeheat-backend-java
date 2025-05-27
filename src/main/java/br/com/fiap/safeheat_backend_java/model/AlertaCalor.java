@@ -33,6 +33,9 @@ public class AlertaCalor {
     @Column(name = "data_alerta", updatable = false)
     private LocalDateTime dataAlerta;
 
+    @Column(nullable = false, length = 100)
+    private String nivelRisco;
+
     @ManyToOne
     @JoinColumn(name = "id_local")
     private LocalMonitorado local;
