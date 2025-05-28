@@ -12,8 +12,8 @@ import java.time.LocalDateTime;
 public class AlertaCalor {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "alerta_seq")
-    @SequenceGenerator(name = "alerta_seq", sequenceName = "ALERTA_SEQ", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sh_alerta_seq")
+    @SequenceGenerator(name = "sh_alerta_seq", sequenceName = "SH_ALERTA_SEQ", allocationSize = 1)
     @Column(name = "id_alerta")
     @JsonProperty("id_alerta")
     private Long id;

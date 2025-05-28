@@ -1,5 +1,6 @@
 package br.com.fiap.safeheat_backend_java.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.*;
 
 import java.time.LocalDateTime;
@@ -12,13 +13,15 @@ public class AlertaCalorRequestDTO {
     @NotBlank(message = "Mensagem é obrigatória.")
     private String mensagem;
 
-    @NotNull(message = "Data do alerta é obrigatória.")
+    @JsonProperty("data_alerta")
     private LocalDateTime dataAlerta;
 
     @NotBlank(message = "Nível de risco é obrigatório.")
+    @JsonProperty("nivel_risco")
     private String nivelRisco;
 
     @NotNull(message = "ID do local é obrigatório.")
+    @JsonProperty("id_local")
     private Long localId;
 
     public AlertaCalorRequestDTO() {

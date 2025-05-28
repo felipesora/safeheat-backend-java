@@ -21,7 +21,6 @@ public class AlertaCalorMapper {
         AlertaCalor alerta = new AlertaCalor();
         alerta.setGrau(dto.getGrau());
         alerta.setMensagem(dto.getMensagem());
-        alerta.setDataAlerta(dto.getDataAlerta());
         alerta.setNivelRisco(dto.getNivelRisco());
         alerta.setLocal(local);
         return alerta;
