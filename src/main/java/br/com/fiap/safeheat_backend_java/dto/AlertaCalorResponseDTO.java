@@ -1,11 +1,14 @@
 package br.com.fiap.safeheat_backend_java.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import java.time.LocalDateTime;
 
+@JsonPropertyOrder({ "id_alerta", "grau", "nivel_risco", "mensagem", "data_alerta", "id_local" })
 public class AlertaCalorResponseDTO {
 
+    @JsonProperty("id_alerta")
     private Long id;
     private String grau;
     private String mensagem;

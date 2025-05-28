@@ -1,11 +1,14 @@
 package br.com.fiap.safeheat_backend_java.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import java.util.List;
 
+@JsonPropertyOrder({ "id_usuario", "nome", "email", "senha", "locais" })
 public class UsuarioResponseDTO {
 
+    @JsonProperty("id_usuario")
     private Long id;
     private String nome;
     private String email;
