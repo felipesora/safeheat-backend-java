@@ -34,8 +34,6 @@ public class LocalMonitoradoMapper {
             local.getCidade(),
             local.getEstado(),
             local.getCep(),
-            local.getLatitude(),
-            local.getLongitude(),
             local.getUsuario().getId(),
             alertas
         );
@@ -51,8 +49,6 @@ public class LocalMonitoradoMapper {
         local.setCidade(dto.getCidade());
         local.setEstado(dto.getEstado());
         local.setCep(dto.getCep());
-        local.setLatitude(dto.getLatitude());
-        local.setLongitude(dto.getLongitude());
         local.setUsuario(usuario);
         return local;
     }

@@ -7,8 +7,8 @@ import java.time.LocalDateTime;
 
 public class AlertaCalorRequestDTO {
 
-    @NotNull(message = "Grau é obrigatório.")
-    private String grau;
+    @NotNull(message = "Temperatura é obrigatória.")
+    private String temperatura;
 
     @NotBlank(message = "Mensagem é obrigatória.")
     private String mensagem;
@@ -27,20 +27,20 @@ public class AlertaCalorRequestDTO {
     public AlertaCalorRequestDTO() {
     }
 
-    public AlertaCalorRequestDTO(String grau, String mensagem, LocalDateTime dataAlerta, String nivelRisco, Long localId) {
-        this.grau = grau;
+    public AlertaCalorRequestDTO(String temperatura, String mensagem, LocalDateTime dataAlerta, String nivelRisco, Long localId) {
+        this.temperatura = temperatura;
         this.mensagem = mensagem;
         this.dataAlerta = dataAlerta;
         this.nivelRisco = nivelRisco;
         this.localId = localId;
     }
 
-    public String getGrau() {
-        return grau;
+    public String getTemperatura() {
+        return temperatura;
     }
 
-    public void setGrau(String grau) {
-        this.grau = grau;
+    public void setTemperatura(String temperatura) {
+        this.temperatura = temperatura;
     }
 
     public String getMensagem() {

@@ -5,12 +5,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import java.time.LocalDateTime;
 
-@JsonPropertyOrder({ "id_alerta", "grau", "nivel_risco", "mensagem", "data_alerta", "id_local" })
+@JsonPropertyOrder({ "id_alerta", "temperatura", "nivel_risco", "mensagem", "data_alerta", "id_local" })
 public class AlertaCalorResponseDTO {
 
     @JsonProperty("id_alerta")
     private Long id;
-    private String grau;
+    private String temperatura;
     private String mensagem;
     @JsonProperty("data_alerta")
     private LocalDateTime dataAlerta;
@@ -22,9 +22,9 @@ public class AlertaCalorResponseDTO {
     public AlertaCalorResponseDTO() {
     }
 
-    public AlertaCalorResponseDTO(Long id, String grau, String mensagem, LocalDateTime dataAlerta, String nivelRisco, Long localId) {
+    public AlertaCalorResponseDTO(Long id, String temperatura, String mensagem, LocalDateTime dataAlerta, String nivelRisco, Long localId) {
         this.id = id;
-        this.grau = grau;
+        this.temperatura = temperatura;
         this.mensagem = mensagem;
         this.dataAlerta = dataAlerta;
         this.nivelRisco = nivelRisco;
@@ -39,12 +39,12 @@ public class AlertaCalorResponseDTO {
         this.id = id;
     }
 
-    public String getGrau() {
-        return grau;
+    public String getTemperatura() {
+        return temperatura;
     }
 
-    public void setGrau(String grau) {
-        this.grau = grau;
+    public void setTemperatura(String temperatura) {
+        this.temperatura = temperatura;
     }
 
     public String getMensagem() {

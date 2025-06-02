@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 
-@JsonPropertyOrder({ "id_local", "nome", "rua", "numero", "complemento", "bairro", "cidade", "estado", "cep", "latitude", "longitude", "usuario_id" })
+@JsonPropertyOrder({ "id_local", "nome", "rua", "numero", "complemento", "bairro", "cidade", "estado", "cep", "usuario_id" })
 @Entity
 @Table(name = "sh_local_monitorado")
 public class LocalMonitorado {
@@ -44,12 +44,6 @@ public class LocalMonitorado {
     @Column(nullable = false, length = 9)
     private String cep;
 
-    @Column(precision = 10, scale = 6)
-    private BigDecimal latitude;  // para mapa/localização
-
-    @Column(precision = 10, scale = 6)
-    private BigDecimal longitude; // para mapa/localização
-
     @ManyToOne
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
@@ -61,8 +55,7 @@ public class LocalMonitorado {
     }
 
     public LocalMonitorado(Long id, String nome, String rua, String numero, String complemento, String bairro,
-                           String cidade, String estado, String cep, BigDecimal latitude, BigDecimal longitude, Usuario usuario,
-                           List<AlertaCalor> alertas) {
+                           String cidade, String estado, String cep, Usuario usuario, List<AlertaCalor> alertas) {
         this.id = id;
         this.nome = nome;
         this.rua = rua;
@@ -72,8 +65,6 @@ public class LocalMonitorado {
         this.cidade = cidade;
         this.estado = estado;
         this.cep = cep;
-        this.latitude = latitude;
-        this.longitude = longitude;
         this.usuario = usuario;
         this.alertas = alertas;
     }
@@ -148,22 +139,6 @@ public class LocalMonitorado {
 
     public void setCep(String cep) {
         this.cep = cep;
-    }
-
-    public BigDecimal getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(BigDecimal latitude) {
-        this.latitude = latitude;
-    }
-
-    public BigDecimal getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(BigDecimal longitude) {
-        this.longitude = longitude;
     }
 
     public Usuario getUsuario() {

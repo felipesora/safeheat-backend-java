@@ -30,12 +30,6 @@ public class LocalMonitoradoRequestDTO {
     @NotBlank(message = "CEP é obrigatório.")
     private String cep;
 
-    @NotNull(message = "Latitude é obrigatória.")
-    private BigDecimal latitude;
-
-    @NotNull(message = "Longitude é obrigatória.")
-    private BigDecimal longitude;
-
     @NotNull(message = "ID do usuário é obrigatório.")
     @JsonProperty("id_usuario")
     private Long usuarioId;
@@ -44,8 +38,7 @@ public class LocalMonitoradoRequestDTO {
     }
 
     public LocalMonitoradoRequestDTO(String nome, String rua, String numero, String complemento, String bairro,
-                                     String cidade, String estado, String cep, BigDecimal latitude,
-                                     BigDecimal longitude, Long usuarioId) {
+                                     String cidade, String estado, String cep, Long usuarioId) {
         this.nome = nome;
         this.rua = rua;
         this.numero = numero;
@@ -54,8 +47,6 @@ public class LocalMonitoradoRequestDTO {
         this.cidade = cidade;
         this.estado = estado;
         this.cep = cep;
-        this.latitude = latitude;
-        this.longitude = longitude;
         this.usuarioId = usuarioId;
     }
 
@@ -121,22 +112,6 @@ public class LocalMonitoradoRequestDTO {
 
     public void setCep(String cep) {
         this.cep = cep;
-    }
-
-    public BigDecimal getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(BigDecimal latitude) {
-        this.latitude = latitude;
-    }
-
-    public BigDecimal getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(BigDecimal longitude) {
-        this.longitude = longitude;
     }
 
     public Long getUsuarioId() {

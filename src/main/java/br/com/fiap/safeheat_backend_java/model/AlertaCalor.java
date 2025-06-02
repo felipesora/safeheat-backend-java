@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
-@JsonPropertyOrder({ "id_alerta", "grau", "nivel_risco", "data_alerta", "id_local" })
+@JsonPropertyOrder({ "id_alerta", "temperatura", "nivel_risco", "data_alerta", "id_local" })
 @Entity
 @Table(name = "sh_alertas_calor")
 public class AlertaCalor {
@@ -19,7 +19,7 @@ public class AlertaCalor {
     private Long id;
 
     @Column(nullable = false, length = 50)
-    private String grau;
+    private String temperatura;
 
     @Column(nullable = false, length = 300)
     private String mensagem;
@@ -37,9 +37,9 @@ public class AlertaCalor {
     public AlertaCalor() {
     }
 
-    public AlertaCalor(Long id, String grau, String mensagem, LocalDateTime dataAlerta, String nivelRisco, LocalMonitorado local) {
+    public AlertaCalor(Long id, String temperatura, String mensagem, LocalDateTime dataAlerta, String nivelRisco, LocalMonitorado local) {
         this.id = id;
-        this.grau = grau;
+        this.temperatura = temperatura;
         this.mensagem = mensagem;
         this.dataAlerta = dataAlerta;
         this.nivelRisco = nivelRisco;
@@ -59,12 +59,12 @@ public class AlertaCalor {
         this.id = id;
     }
 
-    public String getGrau() {
-        return grau;
+    public String getTemperatura() {
+        return temperatura;
     }
 
-    public void setGrau(String grau) {
-        this.grau = grau;
+    public void setTemperatura(String temperatura) {
+        this.temperatura = temperatura;
     }
 
     public String getMensagem() {

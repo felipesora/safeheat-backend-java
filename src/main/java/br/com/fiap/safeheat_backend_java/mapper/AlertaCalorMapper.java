@@ -9,7 +9,7 @@ public class AlertaCalorMapper {
     public static AlertaCalorResponseDTO toDTO(AlertaCalor alerta) {
         return new AlertaCalorResponseDTO(
                 alerta.getId(),
-                alerta.getGrau(),
+                alerta.getTemperatura(),
                 alerta.getMensagem(),
                 alerta.getDataAlerta(),
                 alerta.getNivelRisco(),
@@ -19,7 +19,7 @@ public class AlertaCalorMapper {
 
     public static AlertaCalor toEntity(AlertaCalorRequestDTO dto, LocalMonitorado local) {
         AlertaCalor alerta = new AlertaCalor();
-        alerta.setGrau(dto.getGrau());
+        alerta.setTemperatura(dto.getTemperatura());
         alerta.setMensagem(dto.getMensagem());
         alerta.setNivelRisco(dto.getNivelRisco());
         alerta.setLocal(local);

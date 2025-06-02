@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import java.math.BigDecimal;
 import java.util.List;
 
-@JsonPropertyOrder({ "id_local", "nome", "rua", "numero", "complemento", "bairro", "cidade", "estado", "cep", "latitude", "longitude", "id_usuario", "alertas" })
+@JsonPropertyOrder({ "id_local", "nome", "rua", "numero", "complemento", "bairro", "cidade", "estado", "cep", "id_usuario", "alertas" })
 public class LocalMonitoradoResponseDTO {
     @JsonProperty("id_local")
     private Long id;
@@ -18,8 +18,6 @@ public class LocalMonitoradoResponseDTO {
     private String cidade;
     private String estado;
     private String cep;
-    private BigDecimal latitude;
-    private BigDecimal longitude;
     @JsonProperty("id_usuario")
     private Long usuarioId;
     private List<AlertaCalorResponseDTO> alertas;
@@ -28,8 +26,7 @@ public class LocalMonitoradoResponseDTO {
     }
 
     public LocalMonitoradoResponseDTO(Long id, String nome, String rua, String numero, String complemento,
-                                      String bairro, String cidade, String estado, String cep, BigDecimal latitude,
-                                      BigDecimal longitude, Long usuarioId, List<AlertaCalorResponseDTO> alertas) {
+                                      String bairro, String cidade, String estado, String cep, Long usuarioId, List<AlertaCalorResponseDTO> alertas) {
         this.id = id;
         this.nome = nome;
         this.rua = rua;
@@ -39,8 +36,6 @@ public class LocalMonitoradoResponseDTO {
         this.cidade = cidade;
         this.estado = estado;
         this.cep = cep;
-        this.latitude = latitude;
-        this.longitude = longitude;
         this.usuarioId = usuarioId;
         this.alertas = alertas;
     }
@@ -115,22 +110,6 @@ public class LocalMonitoradoResponseDTO {
 
     public void setCep(String cep) {
         this.cep = cep;
-    }
-
-    public BigDecimal getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(BigDecimal latitude) {
-        this.latitude = latitude;
-    }
-
-    public BigDecimal getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(BigDecimal longitude) {
-        this.longitude = longitude;
     }
 
     public Long getUsuarioId() {
