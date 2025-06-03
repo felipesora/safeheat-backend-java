@@ -100,12 +100,12 @@ Abaixo estão listados os principais endpoints da API do **SafeHeat**, divididos
 - `📄 GET - /usuarios`  
   Lista todas os usuários cadastrados, com seus locais e alertas cadastrados.
 
-![GET usuarios](images/usuarios-get.png)
+![GET usuarios](images/get-usuarios.png)
 
 - `🔍 GET BY ID - /usuarios/{id}`  
   Lista o usuário cadastrado com este id.
 
-![GET ID usuarios](images/usuarios-get-id.png)
+![GET ID usuarios](images/get-id-usuarios.png)
 
 - `✏️ PUT - /usuarios/{id}`  
   Atualiza os dados do usuário com este id.
@@ -145,12 +145,12 @@ Abaixo estão listados os principais endpoints da API do **SafeHeat**, divididos
 - `📄 GET - /locais`  
   Lista todos os locais cadastrados.
 
-![GET locais](images/motos-get.png)
+![GET locais](images/get-locais.png)
 
 - `🔍 GET BY ID - /locais/{id}`  
   Lista o local cadastrado com este id.
 
-![GET ID locais](images/motos-get-id.png)
+![GET ID locais](images/get-id-alertas.png)
 
 - `✏️ PUT - /locais/{id}`  
   Atualiza os dados do local com este id.
@@ -192,12 +192,12 @@ Abaixo estão listados os principais endpoints da API do **SafeHeat**, divididos
 - `📄 GET - /alertas`  
   Lista todos os alertas de calor cadastradas.
 
-![GET alertas](images/movimentacoes-get.png)
+![GET alertas](images/get-alertas.png)
 
 - `🔍 GET BY ID - /alertas/{id}`  
   Lista o alerta de calor cadastrado com este id.
 
-![GET ID alertas](images/movimentacoes-get-id.png)
+![GET ID alertas](images/get-id-alertas.png)
 
 - `✏️ PUT - /alertas/{id}`  
   Atualiza os dados do alerta de calor com este id.
@@ -214,6 +214,31 @@ Abaixo estão listados os principais endpoints da API do **SafeHeat**, divididos
 
 - `🗑️ DELETE - /alertas/{id}`  
   Remove o alerta de calor com este id.
+
+---
+
+## ☁️ Deploy e URL da API
+
+O backend do SafeHeat está disponível em produção, permitindo que qualquer aplicação (mobile, web ou cliente HTTP) consuma os endpoints diretamente pela internet.
+
+### 🌐 URL Pública da API
+
+> 📎 Base URL: https://safeheat-backend-java.onrender.com
+
+Você pode acessar diretamente a documentação Swagger da API:
+
+```bash
+https://https://safeheat-backend-java.onrender.com/swagger-ui/index.html
+```
+
+### 🚀 Plataforma de Deploy
+A API foi hospedada utilizando:
+
+- Render para deploy automatizado
+- Integração com GitHub
+- Build com Maven + Java 21
+- Banco de dados Oracle
+
 
 ---
 
@@ -284,7 +309,9 @@ http://localhost:8080/swagger-ui/index.html
 
 - Visualização dos modelos (DTOs/Entidades) usados nas requisições e respostas, com validações.
 
+![Swagger UI](images/swagger.png)
 
+![Endpoints do Swagger](images/endpoints-swagger.png)
 ---
 
 ### ✅ Pronto!
