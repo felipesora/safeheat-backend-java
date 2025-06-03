@@ -138,8 +138,6 @@ Abaixo estão listados os principais endpoints da API do **SafeHeat**, divididos
   "cidade": "São Paulo",
   "estado": "SP",
   "cep": "01234-567",
-  "latitude": -23.561684,
-  "longitude": -46.625378,
   "id_usuario": 1
 }
 ```
@@ -167,8 +165,6 @@ Abaixo estão listados os principais endpoints da API do **SafeHeat**, divididos
   "cidade": "São Paulo",
   "estado": "SP",
   "cep": "01502-000",
-  "latitude": -23.558988,
-  "longitude": -46.635295,
   "id_usuario": 1
 }
 ```
@@ -185,7 +181,7 @@ Abaixo estão listados os principais endpoints da API do **SafeHeat**, divididos
 
 ```jsonc
 {
-  "grau": "42°C",
+  "temperatura": "42",
   "mensagem": "Risco de insolação — evite exposição prolongada ao sol.",
   "data_alerta": "2025-05-27T14:00:00Z",
   "nivel_risco": "Alto",
@@ -208,7 +204,7 @@ Abaixo estão listados os principais endpoints da API do **SafeHeat**, divididos
 
 ```jsonc
 {
-  "grau": "40°C",
+  "temperatura": "40",
   "mensagem": "Temperatura crítica. Mantenha-se hidratado.",
   "data_alerta": "2025-05-28T12:00:00Z",
   "nivel_risco": "Moderado",
