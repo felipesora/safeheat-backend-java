@@ -17,7 +17,7 @@ Com a API desenvolvida em Java, é possível:
 ## 🚀 Funcionalidades da API
 
 - ✅ Cadastro e gerenciamento de usuários
-- ✅ Cadastro de locais monitorados (com geolocalização)
+- ✅ Cadastro de locais monitorados
 - ✅ Registro e consulta de alertas de calor- Associar um **status atual** à moto (ex: Em análise, Em manutenção, Disponível).
 - ✅ Associação entre usuários, locais e alertas
 - ✅ Atualização e exclusão de registros
@@ -316,3 +316,36 @@ http://localhost:8080/swagger-ui/index.html
 
 ### ✅ Pronto!
 Agora você pode testar todos os recursos do **SafeHeat** diretamente via API REST, utilizando o Postman ou outra ferramenta de sua preferência.
+
+---
+
+## 🎥 Demonstrações e Links Relacionados
+
+### 📽️ Vídeo de Demonstração da Solução Completa
+Veja o funcionamento completo da solução SafeHeat (Backend Java):
+
+[🔗 Assista à demonstração](https://www.youtube.com/watch?v=dxxsXDfPdro)
+
+---
+
+### 🗣️ Vídeo Pitch do Projeto
+
+Entenda o contexto, problema, solução proposta e impacto social do SafeHeat no nosso pitch oficial:
+
+[🔗 Assista ao Pitch](https://github.com/felipesora)
+
+---
+
+### 🏛️ Backend .NET (Gestão Pública)
+
+Aplicação web e API para prefeituras e órgãos públicos gerenciarem abrigos e recursos durante eventos extremos.
+
+[🔗 Repositório Backend .NET](https://github.com/felipesora/safeheat-backend-dotnet)
+
+### 📱 Projeto Mobile (React Native)
+
+---
+
+Frontend mobile desenvolvido com React Native, integrando as APIs de Java e .NET:
+
+[🔗 Repositório do Mobile (SafeHeat App)](https://github.com/felipesora/safeheat-frontend-mobile)
